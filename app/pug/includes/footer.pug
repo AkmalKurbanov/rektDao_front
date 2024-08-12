@@ -1,4 +1,11 @@
-footer 2     
+footer.footer
+  .container
+    .social.social_right
+      ul 
+        each item in social 
+          li
+            a(href=item.link)
+              img(src="images/dist/"+item.img, alt="") 
 
 
 

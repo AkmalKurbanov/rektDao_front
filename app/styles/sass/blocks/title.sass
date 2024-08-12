@@ -1,0 +1,99 @@
+.title
+  font-family: drukwide
+  color: white
+  font-weight: 700
+  text-transform: uppercase
+  @include adaptiv('margin-bottom', 13, 10, 0)
+  
+  br
+    @include xs
+      display: none
+
+  &_h1
+    @include adaptiv('font-size', 35, 18, 0)
+    @include adaptiv('line-height', 40, 22, 0)
+
+    @include xs
+      font-size: rem(28)
+      line-height: rem(32)
+  
+  &_h2
+    @include adaptiv('font-size', 28, 16, 0)
+    @include adaptiv('line-height', 33, 20, 0)
+
+    @include xs
+      font-size: rem(28)
+      line-height: rem(32)
+
+  &__arrow
+    display: inline-block
+    margin-bottom: rem(22)
+
+    a
+      @include aic-jcc
+
+      svg
+        transition: $tr
+
+        path
+          transition: $tr
+
+      &:hover
+        svg
+          transform: translateX(5px)
+
+  &_accent
+    span
+      color: $accent
+      background: linear-gradient(90deg, $accent 28.57%, rgba(167, 80, 255, 0.06) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      
+
+    .title__arrow
+      svg
+        path
+          fill: $accent
+
+      &:hover
+        svg
+          path
+            fill: $secondary
+
+  &_secondary
+    span
+      color: $secondary
+      background: linear-gradient(90deg, $secondary 28.57%, rgba(74, 255, 92, 0.185) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    .title__arrow
+      svg
+        path
+          fill: $secondary
+
+      &:hover
+        svg
+          path
+            fill: $accent
+
+  &_subtitle
+    font-family: manrope
+    text-transform: inherit
+    font-weight: 400
+    @include adaptiv('font-size', 20, 14, 0)
+    @include adaptiv('line-height', 27, 19, 0)
+
+    @include xs
+      font-size: rem(20)
+      line-height: rem(27)
+
+    span
+      -webkit-background-clip: text!important
+      -webkit-text-fill-color: transparent!important
+      background-clip: text!important
+      text-fill-color: transparent!important
+
+    &.title_secondary
+      span
+        background: linear-gradient(90deg, $secondary 28.57%, rgba(74, 255, 92, 0.185) 100%)

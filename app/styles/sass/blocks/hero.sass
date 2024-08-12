@@ -1,0 +1,108 @@
+.hero
+  overflow: hidden
+
+  @include xs
+    display: none
+    
+  &__inner
+    max-height: rem(700)
+    min-height: rem(700)
+    padding-top: rem(70)
+    padding-bottom: rem(135)
+    position: relative
+
+    @include adaptiv('max-height', 700, 500, 0)
+    @include adaptiv('min-height', 700, 500, 0)
+
+    &::after
+      position: absolute
+      content: ''
+      width: calc( 100% + 80px )
+      left: 50%
+      transform: translateX(-50%)
+      @include adaptiv('height', 327, 150, 0)
+      top: calc( 100% - 120px )
+      background: linear-gradient(180deg, #020202 16%, #020202 100%)
+      filter: blur(39.5px)
+
+      @include md
+        top: calc( 100% - 60px )
+  
+  &__bg
+    position: absolute
+    height: 100%
+    top: 0
+    width: calc( 100% + 80px)
+    left: 50%
+    transform: translateX(-50%)
+    background-image: url('/images/dist/hero2.webp')
+    background-size: cover
+    background-position: bottom
+    background-repeat: no-repeat
+
+    @include sm
+      width: calc( 100% + 100px)
+
+    @include xs
+      width: 100%
+      // background-size: 2200px
+      // background-position: 
+
+    &::before,
+    &::after
+      position: absolute
+      content: ''
+      height: 100%
+      width: rem(70)
+      background: linear-gradient(180deg, $accent 13.52%, $accent 100%)
+      background: linear-gradient(180deg, #020202 13.52%, #020202 100%)
+      filter: blur(20px)
+      top: 0
+
+    &::before
+      left: rem(-25)
+
+    &::after
+      right: rem(-25)
+
+
+    
+      
+  &__flex-wrap
+    margin-top: rem(36)
+    @include aifs-jcc
+
+    .logo
+      margin-right: rem(10)
+
+      &:last-child
+        margin-right: 0
+      
+  &__btn-wrap
+    @include aic-jcc
+    position: relative
+    z-index: 1
+
+    .btn
+      border-width: rem(3)
+      @include adaptiv('margin-top', 40, 20, 0)
+
+  &__scrolldown
+    text-align: center
+    @include adaptiv('margin-top', 40, 20, 0)
+    position: relative
+    z-index: 1
+
+    &:hover
+     .text-shine
+        transform: translateY(-3px)
+    
+  .text-shine
+    color: white
+    font-size: rem(14)
+    font-weight: 700
+    font-family: drukwide
+    text-transform: uppercase
+    display: inline-block
+    cursor: pointer
+    transition: $tr

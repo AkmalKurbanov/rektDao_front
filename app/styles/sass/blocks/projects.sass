@@ -1,0 +1,319 @@
+.projects
+  z-index: 10
+  position: relative
+  padding-top: rem(20)
+
+  .container
+    position: relative
+
+    &::after
+      position: absolute
+      content: ''
+      width: rem(245)
+      height: rem(245)
+      border-radius: 100%
+      background: $secondary
+      filter: blur(150px)
+      top: 0
+      right: 0
+
+      @include xs
+        top: rem(-120)
+
+  &__wrap 
+    position: relative
+    z-index: 1
+
+  &__filter
+    margin-top: rem(25)
+    p
+      color: white
+      font-weight: 700
+      text-transform: uppercase
+      font-weight: drukwide
+
+      span
+        color: #757575
+        font-family: manrope
+        margin: 0 rem(5)
+        display: inline-flex
+        align-items: center
+        cursor: pointer
+        transition: $tr
+        svg
+          margin: 0 rem(5)
+          
+          path
+            fill: #757575
+            transition: $tr
+
+
+
+  &__inner
+    margin-left: rem(-10)
+    margin-right: rem(-10)
+    margin-top: rem(15)
+    @include adaptiv('margin-bottom', 40, 20, 0)
+    position: relative
+    @include fww
+    
+
+  &__col
+    padding: rem(10)
+    width: 50%
+    @include jfcfe
+
+    @include md
+      width: 100%
+
+  &__item 
+    @include aic-jcc
+    width: calc( 100% - 58px )
+    position: relative
+    
+    @include md
+      width: 100%
+
+
+  &__logo
+    @include adaptiv('max-width', 117, 100, 0)  
+    @include adaptiv('min-width', 117, 100, 0)  
+    @include adaptiv('height', 117, 100, 0)
+    @include aic-jcc  
+    position: absolute
+    left: rem(-58)
+
+    @include md
+      left: auto
+      right: rem(15)
+      top: rem(10)
+      max-width: rem(70)
+      min-width: rem(70)
+      height: rem(70)
+
+    @include xs
+      max-width: rem(40)
+      min-width: rem(40)
+      height: rem(40)
+      top: rem(20)  
+
+    img
+      position: absolute
+      content: ''
+      width: calc( 100% - 5px )
+      height: calc( 100% - 5px )
+      top: rem(5)
+      right: rem(5)
+      bottom: rem(5)
+      left: rem(5)
+      object-fit: contain
+      object-position: center
+      @include aic-jcc
+  
+  &__info
+    background: #242424
+    border-radius: rem(15)
+    padding: rem(25) rem(10) rem(25)
+    width: 100%
+    @include adaptiv('padding-left', 60, 40, 0)
+
+    @include md
+      padding-left: rem(10)
+
+    @include sm
+      padding-left: rem(40)
+
+    @include xs
+      padding: rem(25) rem(15)  
+    
+
+  &__info-top
+    @include aic
+    margin-bottom: rem(14)
+
+  &__top-count
+    border-width: rem(1)
+    border-style: solid 
+    border-radius: 100%
+    max-width: rem(30)
+    min-width: rem(30)
+    height: rem(30)
+    @include aic-jcc
+    text-align: center
+    @include adaptiv('font-size', 11, 9, 0)
+    font-weight: 700
+    font-family: drukwide
+    color: white
+    margin-right: rem(5)
+
+    @include md
+      font-size: rem(11)
+
+
+  &__name
+    @include adaptiv('font-size', 16, 13, 0)
+    font-weight: 700
+    color: white
+    font-family: drukwide
+    text-transform: uppercase
+    margin-bottom: rem(5)
+
+    @include md
+      font-size: rem(16)
+
+  &__status  
+    color: white
+    font-size: rem(10)
+    padding-left: rem(10)
+    position: relative
+
+    &::before
+      position: absolute
+      content: ''
+      width: rem(5)
+      height: rem(5)
+      border-radius: 100%
+      background: $secondary
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+
+  &__bottom-counts
+    @include aic
+    margin-bottom: rem(13)
+
+  &__bottom-counts-item
+    margin-right: rem(17)
+    
+    &:last-child
+      margin-right: 0
+
+    span
+      font-size: rem(5)
+      text-transform: uppercase
+      font-family: drukwide
+      margin-bottom: rem(3)
+      font-weight: 700
+
+
+    p
+      color: white
+      font-weight: 700
+      text-transform: uppercase
+      font-size: rem(12)
+
+  &__controls 
+    .btn
+      max-width: none
+      min-width: auto
+      min-height: rem(23)
+      @include adaptiv('padding-left', 18, 10, 0)
+      @include adaptiv('padding-right', 18, 10, 0)
+      margin-right: rem(10)
+      @include adaptiv('font-size', 8, 6, 0)
+
+      @include md
+        font-size: rem(8)
+        padding: 0 rem(12)
+        margin-right: rem(5)
+
+      &:last-child
+        margin-right: 0
+
+  &__filter-wrap
+    @include jfcsb-fww
+    align-items: flex-end
+    margin-left: rem(-10)
+    margin-right: rem(-10)
+
+  &__filter-col
+    width: 50%
+    padding: rem(10)
+    
+    @include md
+      width: 100%
+
+
+    &:last-child
+      @include adaptiv('margin-bottom', 13, 10, 0)
+
+  &__wrap-col
+    @include fww
+    @include adaptiv('margin-left', -10, -5, 0)
+    @include adaptiv('margin-right', -10, -5, 0)
+    @include adaptiv('margin-bottom', 40, 20, 0)
+    
+
+  &__col
+    width: 50%
+    @include adaptiv('padding', 10, 5, 0)
+
+    @include sm
+      width: 100%
+
+
+  &__col-item
+    @include adaptiv('padding-top', 30, 15, 0)
+    @include adaptiv('padding-bottom', 30, 15, 0)
+    @include adaptiv('padding-left', 20, 15, 0)
+    @include adaptiv('padding-right', 20, 15, 0)
+    background: rgba(25,25,25,.75)
+    border-radius: rem(15)
+
+  &__col-logo  
+    @include adaptiv('max-width', 85, 40, 0)
+    @include adaptiv('min-width', 85, 40, 0)
+    @include adaptiv('height', 85, 40, 0)
+    @include aic-jcc
+    @include adaptiv('margin-bottom', 40, 20, 0)
+
+    img
+      width: 100%
+
+  &__col-name
+    text-transform: uppercase
+    font-family: drukwide    
+    color: white
+    font-weight: 700
+    @include adaptiv('font-size', 24, 12, 0)
+    margin-bottom: rem(10)
+  
+  &__col-desc
+    font-size: rem(12)
+    line-height: rem(16)
+    color: white
+
+  &__col-link
+    margin-top: rem(20)  
+    @include aic
+    font-size: rem(14)
+    font-weight: 600
+    color: white
+    text-decoration: none
+    display: inline-flex
+    transition: $tr
+
+    svg
+      margin-right: rem(5)
+      transition: $tr
+
+    &:hover
+      svg
+        transform: translateX(2px)  
+
+  &__bg
+    width: 100%
+    height: calc( 100% - 160px )
+    background-image: url('/images/dist/blog-bg.webp')
+    background-position: bottom right
+    position: absolute
+    bottom: 0
+    background-size: cover
+    left: 50%
+    transform: translateX(-50%)
+    pointer-events: none
+    opacity: .5
+    
+    @include xs
+      display: none
+      

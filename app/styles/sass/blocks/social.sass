@@ -1,0 +1,28 @@
+.social
+  display: flex
+  ul
+    padding: 0
+    @include aic
+
+    li
+      list-style: none
+      margin-right: rem(10)
+
+      &:last-child
+        margin-right: 0
+        
+      a
+        max-width: rem(26)
+        min-width: rem(26)
+        height: rem(26)
+        @include aic-jcc
+
+        img
+          width: 100%
+
+        
+  &_centered
+    justify-content: center
+    
+  &_right
+    justify-content: flex-end

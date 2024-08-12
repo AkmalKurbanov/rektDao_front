@@ -1,0 +1,23 @@
+.error
+  text-align: center
+  position: relative
+  z-index: 1
+  overflow: hidden
+
+  &__inner
+    @include aic-fdc
+    justify-content: center
+    padding-bottom: rem(50)
+    margin-top: 150px
+    position: relative
+    z-index: 1
+
+  &__number
+    color: $accent
+    font-weight: 700
+    @include adaptiv('font-size', 200, 150, 0)
+
+  &__text
+    color: white
+    @include adaptiv('font-size', 30, 20, 0)
+    margin: rem(20) 0

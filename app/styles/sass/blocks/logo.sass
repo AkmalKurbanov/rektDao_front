@@ -1,0 +1,148 @@
+.logo
+  @include aic-fdc
+  position: relative
+
+  &::before
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &__img
+    width: rem(87)
+    height: rem(87)
+    position: relative
+    @include aic-jcc
+    margin-bottom: rem(20)
+
+    img
+      position: absolute
+      object-fit: contain
+      object-position: center
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+
+  &__name
+    font-size: rem(14)
+    line-height: rem(16)
+    font-weight: 700
+    color: white
+    margin-bottom: rem(7)
+    font-family: drukwide
+    text-align: center
+
+  &__name-sub
+    font-size: rem(14)
+    font-weight: 600
+    color: white
+    font-family: manrope
+    transition: $tr
+    text-decoration: none
+    text-align: center
+
+  
+
+  .btn
+    @include adaptiv('margin-top', 35, 22, 0)
+
+  &_main
+    &::before
+      width: rem(100)
+      height: rem(100)
+
+    .logo__name
+      @include adaptiv('font-size', 32, 16, 0)
+      @include adaptiv('line-height', 38, 18, 0)
+
+    .logo__img
+      @include adaptiv('width', 190, 120, 0)
+      @include adaptiv('height', 190, 120, 0)
+
+  &_accent-gradient,
+  &_secondary-gradient,
+  &_third-gradient
+    &::before
+      position: absolute
+      content: ''
+      border-radius: 100%
+      filter: blur(52px)
+
+  &_secondary-gradient
+    &::before
+      background: $secondary
+
+    .btn
+      &:hover
+        border-color: $secondary
+        color: $secondary  
+
+  &_accent-gradient
+    &::before
+      background: $accent
+
+    .btn
+      &:hover
+        border-color: $accent
+        color: $accent
+
+  &_third-gradient
+    &::before
+      background: $third
+
+    .btn
+      &:hover
+        border-color: $third
+        color: $third
+
+
+  &_accent-color
+    .logo__name
+      span
+        color: $accent
+    .btn
+      &:hover
+        border-color: $accent
+        color: $accent
+
+    a
+      cursor: pointer
+      &:hover
+        color: $accent  
+
+  &_secondary-color
+    .logo__name
+      span
+        color: $secondary
+    .btn
+      &:hover
+        border-color: $secondary
+        color: $secondary
+
+    a
+      cursor: pointer
+      &:hover
+        color: $secondary    
+
+  &_third-color
+    .logo__name
+      span
+        color: $third
+    .btn
+      &:hover
+        border-color: $third
+        color: $third
+
+    a
+      cursor: pointer
+      &:hover
+        color: $third     
+
+
+  &.disabled
+    filter: grayscale(1)
+    color: #5C5C5C
+    opacity: 0.6
+    pointer-events: none

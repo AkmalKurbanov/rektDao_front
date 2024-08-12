@@ -1,0 +1,389 @@
+.detail-page
+
+  &__bg
+    position: absolute
+    height: 100%
+    top: 0
+    width: calc( 100% + 80px)
+    left: 50%
+    transform: translateX(-50%)
+    background-image: url('/images/dist/hero-detail.webp')
+    background-size: cover
+    background-position: bottom
+    background-repeat: no-repeat
+
+    @include sm
+      width: calc( 100% + 100px)
+
+    @include xs
+      width: 100%
+      // background-size: 2200px
+      // background-position: 
+
+    &::before,
+    &::after
+      position: absolute
+      content: ''
+      height: 100%
+      width: rem(70)
+      background: linear-gradient(180deg, #020202 13.52%, #020202 100%)
+      filter: blur(20px)
+      top: 0
+
+    &::before
+      left: rem(-25)
+
+    &::after
+      right: rem(-25)
+
+  &__hero
+    min-height: rem(550)
+    position: relative
+    height: 100%
+    @include adaptiv('padding-bottom', 43, 35, 0)
+
+    &::after
+      position: absolute
+      content: ''
+      width: calc( 100% + 80px )
+      left: 50%
+      transform: translateX(-50%)
+      height: 327.25px
+      top: calc( 100% - 30px )
+      background: linear-gradient(180deg, #020202 16%, #020202 100%)
+      filter: blur(39.5px)
+      pointer-events: none
+
+    .title-category
+      font-size: rem(14)
+      font-weight: 700
+      color: white
+      font-family: drukwide
+
+    .title
+      margin-top: rem(16)
+      margin-bottom: rem(25)
+
+    .btn.xs-dif
+      margin-top: rem(15)
+
+  &_accent
+    .header
+      .btn
+        border: rem(3) solid $accent
+
+        &:hover
+          color: $accent
+
+      &__logo
+        span
+          color: $accent
+
+      &__logo-img
+        &::before
+          background: $accent
+
+      .hamburger
+        span
+          background: linear-gradient(90deg, $accent 0%, rgba(167, 80, 255, 0) 111.67%)
+
+        &.open
+          span
+            background: $accent
+
+    .title-category
+      span
+        color: $accent
+
+    .detail-page__hero-wrap
+      .btn
+        border-color: $accent
+
+        &:hover
+          border-color: $accent
+          color: $accent
+
+    .title_subtitle
+      span
+        background: linear-gradient(90deg, $accent 28.57%, rgba(74, 255, 92, 0.185) 100%)
+
+    .projects
+      &__top-count
+        border-color: $accent
+
+      &__bottom-counts-item
+        span
+          color: $accent
+
+      &__controls
+        .btn
+          &:hover
+            border-color: $accent
+            color: $accent
+
+      &__col-link
+        svg
+          path
+            fill: $accent
+        &:hover
+          color: $accent
+
+      .btn
+        &:hover
+          border-color: $accent
+          color: $accent
+
+    .projects__filter
+      span
+        &:hover
+          color: $accent
+          svg
+            path
+              fill: $accent
+
+    .blog
+      .btn
+        &:hover
+          border-color: $accent
+          color: $accent
+
+      &__item-link
+        svg
+          path
+            fill: $accent
+
+        &:hover
+          color: $accent
+
+    .select__item
+      &:hover
+        .select__text
+          color: $accent
+
+    .back-btn
+      svg
+        path
+          fill: $accent
+
+    .title
+      a
+        color: $accent
+  
+  &_secondary
+    .header
+      .btn
+        border: rem(3) solid $secondary
+
+        &:hover
+          color: $secondary
+
+      &__logo
+        span
+          color: $secondary
+
+      &__logo-img
+        &::before
+          background: $secondary
+
+      .hamburger
+        span
+          background: linear-gradient(90deg, $secondary 0%, rgba(167, 80, 255, 0) 111.67%)
+
+        &.open
+          span
+            background: $secondary
+
+    .title-category
+      span
+        color: $secondary
+
+    .detail-page__hero-wrap
+      .btn
+        border-color: $secondary
+
+        &:hover
+          border-color: $secondary
+          color: $secondary
+    .title_subtitle
+      span
+        background: linear-gradient(90deg, $secondary 28.57%, rgba(74, 255, 92, 0.185) 100%)
+
+    .projects
+      &__top-count
+        border-color: $secondary
+
+      &__bottom-counts-item
+        span
+          color: $secondary
+
+      &__controls
+        .btn
+          &:hover
+            border-color: $secondary
+            color: $secondary
+
+      &__col-link
+        svg
+          path
+            fill: $secondary
+        &:hover
+          color: $secondary
+
+      .btn
+        &:hover
+          border-color: $secondary
+          color: $secondary
+
+    .projects__filter
+      span
+        &:hover
+          color: $secondary
+          svg
+            path
+              fill: $secondary
+
+    .blog
+      .btn
+        &:hover
+          border-color: $secondary
+          color: $secondary
+
+      &__item-link
+        svg
+          path
+            fill: $secondary
+
+        &:hover
+          color: $secondary
+    
+    .select__item
+      &:hover
+        .select__text
+          color: $secondary
+
+    .back-btn
+      svg
+        path
+          fill: $secondary
+
+    .title
+      a
+        color: $secondary
+
+  &_third
+    .header
+      .btn
+        border: rem(3) solid $third
+
+        &:hover
+          color: $third
+
+      &__logo
+        span
+          color: $third
+
+      &__logo-img
+        &::before
+          background: $third
+
+      .hamburger
+        span
+          background: linear-gradient(90deg, $third 0%, rgba(167, 80, 255, 0) 111.67%)
+
+        &.open
+          span
+            background: $third
+
+    .title-category
+      span
+        color: $third
+
+    .detail-page__hero-wrap
+      .btn
+        border-color: $third
+
+        &:hover
+          border-color: $third
+          color: $third
+
+    .title_subtitle
+      span
+        background: linear-gradient(90deg, $third 28.57%, rgba(74, 255, 92, 0.185) 100%)
+
+    .projects
+      &__top-count
+        border-color: $third
+
+      &__bottom-counts-item
+        span
+          color: $third
+
+      &__controls
+        .btn
+          &:hover
+            border-color: $third
+            color: $third
+
+      &__col-link
+        svg
+          path
+            fill: $third
+        &:hover
+          color: $third
+
+      .btn
+        &:hover
+          border-color: $third
+          color: $third
+
+    .projects__filter
+      span
+        &:hover
+          color: $third
+          svg
+            path
+              fill: $third
+    .blog
+      .btn
+        &:hover
+          border-color: $third
+          color: $third
+
+      &__item-link
+        svg
+          path
+            fill: $third
+
+        &:hover
+          color: $third
+
+    .select__item
+      &:hover
+        .select__text
+          color: $third
+
+    .back-btn
+      svg
+        path
+          fill: $third
+
+    .title
+      a
+        color: $third
+
+  &__hero-wrap
+    position: relative
+    z-index: 10
+
+    .btn
+      margin-right: rem(20)
+
+      &:first-child
+        border-color: white
+
+  .blog
+    &__inner
+      &::after
+        display: none
+
+

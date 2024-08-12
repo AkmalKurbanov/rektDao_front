@@ -1,0 +1,44 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Detail page
+block main
+  .wrapper
+    .content
+      .detail-page.detail-page_accent
+        .container
+          .detail-page__hero
+            include includes/header
+            
+            .detail-page__bg
+
+            .detail-page__hero-wrap
+              .title-category 
+                span validator
+                |DAO
+              h1.title.title_h1 One of the directions of rektDAO: validation of the Cosmos ecosystem network
+              
+              .detail-page__btn-controls
+                a(href="#projects" data-scroll).btn PROJECTS
+                a(href="#").btn.xs-dif CONNECT WALLET
+              
+        include includes/projects
+
+        include includes/blog
+        +blog
+        
+         
+     
+
+  
+
+  include includes/footer 
+  include includes/scripts 

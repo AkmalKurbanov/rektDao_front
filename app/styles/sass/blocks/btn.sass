@@ -1,0 +1,59 @@
+.btn-wrap
+  &_centered
+    @include jcc
+
+.btn
+  border: none
+  outline: none
+  text-decoration: none
+  text-transform: uppercase
+  color: white
+  font-size: rem(14)
+  font-weight: 700
+  font-family: drukwide
+  min-width: rem(261)
+  min-height: rem(36)
+  border-radius: rem(5)
+  border: rem(1) solid white
+  @include aic-jcc
+  display: inline-flex
+  text-align: center
+  transition: $tr
+  
+
+  &:hover
+    color: $accent
+    border-color: $accent
+
+  &_accent
+    border-color: $accent
+
+  &_secondary
+    border-color: $secondary
+    
+  &_third
+    border-color: $third
+    
+
+  &.disabled
+    pointer-events: none
+    border-color: #757575
+    color: #757575
+
+.back-btn
+  background: #242424
+  color: white
+  font-size: rem(10)
+  @include aic-jcc
+  display: inline-flex
+  min-width: rem(55)
+  min-height: rem(21)
+  text-decoration: none
+  border-radius: rem(5)
+  line-height: rem(21)
+
+  svg
+    margin-right: rem(5)
+
+    path
+      fill: $accent      

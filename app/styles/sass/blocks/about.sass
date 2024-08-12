@@ -1,0 +1,123 @@
+.about
+  overflow: hidden
+  position: relative
+  
+
+  .title
+    br
+      display: none
+
+      @include xs
+        display: block
+
+  &__bg
+    position: absolute
+    height: 100%
+    top: 0
+    width: calc( 100% + 80px)
+    left: 50%
+    transform: translateX(-50%)
+    background-image: url('/images/dist/about-bg2.webp')
+    background-size: cover
+    background-position: bottom
+    background-repeat: no-repeat
+
+    @include sm
+      width: calc( 100% + 100px)
+
+    @include xs
+      width: 100%
+      // background-size: 2200px
+      // background-position: 
+
+    &::before,
+    &::after
+      position: absolute
+      content: ''
+      height: 100%
+      width: rem(50)
+      background: linear-gradient(180deg, $accent 13.52%, $accent 100%)
+      background: linear-gradient(180deg, #020202 13.52%, #020202 100%)
+      filter: blur(20px)
+
+      top: 0
+
+      @include md
+        filter: blur(15px)
+
+    //   @include sm
+    //     filter: blur(30px)
+
+    &::before
+      left: rem(-25)
+
+      @include md
+        left: rem(-20)
+
+      @include sm
+        left: rem(-15)
+
+      @include xs
+        left: rem(-30)
+
+    &::after
+      right: rem(-25)
+
+      @include md
+        right: rem(-20)
+
+      @include sm
+        right: rem(-15)
+
+      @include xs
+        right: rem(-30)
+
+  &__inner
+    position: relative
+    padding-top: rem(100)
+
+    @include xs
+      padding-top: rem(50)
+
+  &__wrap
+    position: relative
+    z-index: 1
+
+  &__flex-wrap
+    @include aifs-jfcsb
+    flex-wrap: wrap
+    margin-left: rem(-15)
+    margin-right: rem(-15)
+    @include adaptiv('margin-top', 50, 35, 0)
+
+  &__flex-col
+    width: 50%
+    padding: 0 rem(15)
+
+    @include sm
+      width: 100%
+      margin-bottom: rem(35)
+
+    &:last-child
+      margin-bottom: 0
+
+  &__flex-item
+    border-radius: rem(15)
+    background: rgba(17, 17, 17, 0.65)
+    padding: rem(30) 0
+
+    .logo__name
+      @include adaptiv('font-size', 22, 16, 0)
+      @include adaptiv('line-height', 26, 20, 0)
+
+      @include xs
+        font-size: rem(22)
+        line-height: rem(26)
+
+    .logo__name-sub
+      @include adaptiv('font-size', 16, 12, 0)
+      @include adaptiv('line-height', 21, 17, 0)
+
+      @include xs
+        font-size: rem(16)
+        line-height: rem(21)

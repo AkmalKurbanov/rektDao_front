@@ -1,0 +1,29 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | 404
+block main
+  .wrapper
+    .content
+      .error
+        .container
+          .detail-page.detail-page_accent
+            .detail-page__hero
+              include includes/header2
+              
+              .detail-page__bg
+
+                .error__inner
+                  .error__number 404
+                  .error__text Page not found
+                  a(href="#").btn.btn_accent.btn_centered Home 
+
+  include includes/scripts 

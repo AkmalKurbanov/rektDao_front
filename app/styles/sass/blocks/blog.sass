@@ -1,0 +1,236 @@
+.blog
+  position: relative
+  
+  @include xs
+    overflow: hidden
+
+  .title,
+  .btn
+    position: relative
+    z-index: 2
+
+  .btn
+    background: #020202
+
+  &__inner
+    padding-top: rem(90)
+    padding-bottom: rem(104)
+
+    position: relative
+    background: none
+
+
+    &::after
+      position: absolute
+      content: ''
+      width: rem(200)
+      height: rem(200)
+      border-radius: 100%
+      background: $third
+      filter: blur(150px)
+      top: 0
+
+      @include xs
+        top: rem(300)
+
+    &::before
+      position: absolute
+      content: ''
+      width: calc( 100% + 80px )
+      left: 50%
+      transform: translateX(-50%)
+      height: 327.25px
+      top: 0
+      background: linear-gradient(180deg, #0A0A0A 16%, #151515 100%)
+      filter: blur(39.5px)
+
+  &__bg
+    width: 100%
+    height: calc( 100% - 160px )
+    background-image: url('/images/dist/blog-bg.webp')
+    background-position: bottom right
+    position: absolute
+    bottom: 0
+    background-size: cover
+    left: 50%
+    transform: translateX(-50%)
+    pointer-events: none
+    
+    @include xs
+      display: none
+
+
+  &__flex-wrap
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    margin-top: rem(35)
+    @include adaptiv('margin-left', -10, -5, 0)
+    @include adaptiv('margin-right', -10, -5, 0)
+    @include adaptiv('margin-bottom', 60, 30, 0)
+    position: relative
+    z-index: 1
+
+    @include xs
+      margin-left: rem(-10)
+      margin-right: rem(-10)
+
+  &__col
+    @include adaptiv('padding-left', 10, 5, 0)
+    @include adaptiv('padding-right', 10, 5, 0)
+    width: 25%
+
+    @include md
+      width: 50%
+      padding-bottom: rem(45)
+
+    @include xs
+      padding-left: rem(10)
+      padding-right: rem(10)
+      width: 100%
+
+    &:last-child,
+    &:nth-last-child(2)
+      @include md
+        padding-bottom: 0
+
+    &:nth-last-child(2)
+      @include xs
+        padding-bottom: rem(45)
+
+
+        
+
+
+  &__item
+    height: 100%
+    background: rgba(17, 17, 17, 0.8)
+    overflow: hidden
+    @include adaptiv('border-radius', 15, 7, 0)
+
+    @include xs
+      border-radius: rem(15)
+
+  &__item-info
+    @include adaptiv('padding-top', 24, 12, 0)
+    @include adaptiv('padding-bottom', 24, 12, 0)
+    @include adaptiv('padding-left', 10, 5, 0)
+    @include adaptiv('padding-right', 10, 5, 0)
+
+    @include xs
+      padding: rem(24) rem(10)
+
+  &__item-img
+    @include aic-jcc
+    position: relative
+    // min-height: rem(200)
+    // max-height: rem(200)
+    
+    picture
+      @include aic-jcc
+
+    img
+      width: 100%
+      // position: absolute
+      // height: 100%
+      // top: 0
+      // right: 0
+      // bottom: 0
+      // left: 0
+      // object-fit: cover
+      // // object-position: center
+
+  &__item-title
+    @include adaptiv('font-size', 15, 10, 0)
+    @include adaptiv('line-height', 20, 15, 0)
+    font-weight: 700
+    color: white
+    margin-bottom: rem(5)
+    font-family: drukwide
+    text-transform: uppercase
+
+    @include xs
+      font-size: rem(15)
+      line-height: rem(18)
+
+  &__item-date
+    @include adaptiv('font-size', 12, 10, 0)
+    @include adaptiv('line-height', 16, 16, 0)
+    font-weight: 700
+    color: #AAAAAA
+    margin-bottom: rem(5)
+    position: relative
+    padding-left: rem(10)
+
+    &::before
+      position: absolute
+      content: ''
+      width: rem(4)
+      height: rem(4)
+      border-radius: 100%
+      background-color: $secondary
+      left: 0
+      top: rem(6)
+
+  &__item-desc
+    @include adaptiv('font-size', 10, 10, 0)
+    @include adaptiv('line-height', 13, 13, 0)
+    font-weight: 400
+    color: white
+
+  &__item-link
+    @include aic
+    display: inline-flex
+    text-transform: uppercase
+    color: white
+    text-decoration: none
+    transition: $tr
+    font-size: rem(14)
+    font-weight: 700
+    font-family: drukwide
+    margin-top: rem(20)
+
+    &:hover
+      color: $accent
+      svg
+        transform: translateX(3px)
+
+    svg
+      margin-right: rem(5)
+      transition: $tr
+
+      path
+        fill: #A750FF
+
+.blog-date 
+  @include aic
+  svg
+    margin-right: rem(10)
+
+  p
+    color: white  
+
+.blog-detail 
+  position: relative
+  p
+    @include adaptiv('font-size', 16, 14, 0)
+    @include adaptiv('line-height', 21, 19, 0)
+    @include adaptiv('margin-bottom', 30, 15, 0)
+    color: white
+
+  &__banner
+    margin-bottom: rem(30)
+
+  &__banner-wrapper
+    @include adaptiv('border-radius', 25, 10, 0)
+    overflow: hidden
+    @include aic-jcc
+
+    img
+      width: 100%
+
+  &__banner-desc    
+    margin-top: rem(15)
+    color: #AAAAAA
+    font-size: rem(14)
+    font-weight: 600

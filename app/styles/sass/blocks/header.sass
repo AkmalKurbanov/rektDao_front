@@ -1,3 +1,56 @@
 .header
+  @include adaptiv('margin-bottom', 69, 54, 0)
+  position: relative
+  z-index: 9
+  @include adaptiv('padding-top', 43, 35, 0)
+
+  .btn
+    height: rem(40)
+    
+    @include xs
+      display: none
+
+
+  &__inner
+    @include aic-jfcsb
+
+  &__logo
+    min-width: rem(183)  
+    @include aic
+    color: white
+    font-size: rem(14)
+    font-weight: 700
+    font-family: drukwide
+    text-decoration: none
+
+  &__logo-img
+    width: 100%
+    margin-right: rem(12)
+    position: relative
+
+    @include adaptiv('max-width', 87, 45, 0)
+    @include adaptiv('min-width', 87, 45, 0)
+    @include adaptiv('height', 87, 45, 0)
+
+    
+
+    &::before
+      position: absolute
+      content: ''
+      width: rem(50)
+      height: rem(50)
+      border-radius: 100%
+      filter: blur(25px)
+      left: rem(7)
+
+    img
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      position: absolute
+      object-fit: contain
+      object-position: center
   
-	

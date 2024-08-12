@@ -1,0 +1,63 @@
+.projects#projects
+  .container
+    .projects__bg
+    .projects__wrap  
+
+      .projects__filter-wrap
+      
+        .projects__filter-col
+          h2.title.title_h1 Projects
+          p.title.title_subtitle As a 
+            span sub
+            |DAO, Technic 
+            span rekt
+            |DAO is dedicated to developing innovative blockchain applications and interfaces
+
+        
+        .projects__filter-col
+          .select
+            .select__inner 
+              .select__selected.select-js
+                input(type="hidden", name="filter").select__input
+                .select__col   
+                  .select__img 
+                    img(src="images/dist/select1.webp", alt="")
+                  .select__text.select-txt-js ALL PROJECTS
+                .select__arrow   
+                  svg(width="23", height="12", viewBox="0 0 23 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+                    path(d="M1 1.86206L8.74138 9.2348C10.2862 10.7061 12.7138 10.7061 14.2586 9.2348L22 1.86206", stroke="white", stroke-width="2", stroke-linecap="round")
+
+
+              .select__dropdown.scroll-js
+                each item in projects2
+                  .select__item.select-item-js(data-val=item.name data-text=item.name)
+                    .select__col   
+                      .select__img 
+                        img(src="images/dist/"+item.img, alt="").select-img-js
+                      
+                      .select__text=item.name
+
+      .projects__wrap-col
+        
+        each item in projects2  
+          .projects__col
+            .projects__col-item 
+              .projects__col-logo
+                img(src="images/dist/"+item.img, alt="")
+              .projects__col-name!=item.name
+              .projects__col-desc!=item.desc
+              a(href="#").projects__col-link 
+                svg(width="31", height="9", viewBox="0 0 31 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                  path(d="M30.3536 4.85355C30.5488 4.65829 30.5488 4.34171 30.3536 4.14645L27.1716 0.964466C26.9763 0.769204 26.6597 0.769204 26.4645 0.964466C26.2692 1.15973 26.2692 1.47631 26.4645 1.67157L29.2929 4.5L26.4645 7.32843C26.2692 7.52369 26.2692 7.84027 26.4645 8.03553C26.6597 8.2308 26.9763 8.2308 27.1716 8.03553L30.3536 4.85355ZM0 5H30V4H0V5Z")
+                | see more
+
+              
+
+
+
+        
+       
+
+              
+      .btn-wrap.btn-wrap_centered
+        a(href="#").btn LOAD MORE            

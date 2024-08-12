@@ -1,3 +1,126 @@
 {
-  
+  "blog": [
+    {
+      "title": "What you should know about AGORIC-IST?",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "date": "November 2, written by rektDAO",
+      "img": "blog1.webp"
+    },
+    {
+      "title": "What Juno halving really means",
+      "desc": "Juno successfully completed its first halving on the 24th of October, 2022, decreasing the emission of new tokens into circulation. Let’s take a look at what halving is and what role it plays in the cryptocurrency economy.",
+      "date": "October 22, written by rektDAO",
+      "img": "blog2.webp"
+    },
+    {
+      "title": "Superiority of Cosmos Technology",
+      "desc": "Cosmos is generally referred to as the internet of blockchain but it has gone way beyond just being the internet of blockchains, Cosmos is now a way of life; a design philosophy for blockchains; the blueprint of blockchains. We will be exploring...",
+      "date": "October 12, written by rektDAO",
+      "img": "blog3.webp"
+    },
+    {
+      "title": "The fastest blockchain – Solana",
+      "desc": "Solana is the fastest blockchain in the world and the fastest growing ecosystem in crypto, with thousands of projects spanning DeFi, NFTs, Web3 and more. 01node is a node operator on the Solana blockchain.",
+      "date": "October 3, written by rektDAO",
+      "img": "blog4.webp"
+    }
+  ],
+  "projects": [
+    {
+      "logo": "rebus-chain.webp",
+      "name": "Rebus Chain",
+      "count1": "28",
+      "count2": "8,391,405.00 REBUS",
+      "count3": "530%",
+      "count4": "1,415,134.00 REBUS",
+      "count5": "1%"
+    },
+    {
+      "logo": "stargaze.webp",
+      "name": "STARGAZE",
+      "count1": "115",
+      "count2": "7,039,415.80 STARS",
+      "count3": "61.89%",
+      "count4": "4,341,555.41 STARS",
+      "count5": "5%"
+    },
+    {
+      "logo": "rebus-chain.webp",
+      "name": "Rebus Chain",
+      "count1": "28",
+      "count2": "8,391,405.00 REBUS",
+      "count3": "530%",
+      "count4": "1,415,134.00 REBUS",
+      "count5": "1%"
+    },
+    {
+      "logo": "stargaze.webp",
+      "name": "STARGAZE",
+      "count1": "115",
+      "count2": "7,039,415.80 STARS",
+      "count3": "61.89%",
+      "count4": "4,341,555.41 STARS",
+      "count5": "5%"
+    },
+    {
+      "logo": "rebus-chain.webp",
+      "name": "Rebus Chain",
+      "count1": "28",
+      "count2": "8,391,405.00 REBUS",
+      "count3": "530%",
+      "count4": "1,415,134.00 REBUS",
+      "count5": "1%"
+    },
+    {
+      "logo": "stargaze.webp",
+      "name": "STARGAZE",
+      "count1": "115",
+      "count2": "7,039,415.80 STARS",
+      "count3": "61.89%",
+      "count4": "4,341,555.41 STARS",
+      "count5": "5%"
+    }
+  ],
+  "projects2": [
+    {
+      "name": "Coral p2p",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select2.webp"
+    },
+    {
+      "name": "landing-gopland",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select3.webp"
+    },
+    {
+      "name": "landing-gopland",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select3.webp"
+    },
+    {
+      "name": "Coral p2p",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select2.webp"
+    },
+    {
+      "name": "Coral p2p",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select2.webp"
+    },
+    {
+      "name": "landing-gopland",
+      "desc": "Inter Stable Token (IST), issued by the Inter Protocol, is an IBC-enabled stable token designed to maintain parity with the USD to facilitate economic growth and on-chain transactions. This can be said to be one of the features that make Agoric thrive...",
+      "img": "select3.webp"
+    }
+  ],
+  "social": [
+    {
+      "link": "#",
+      "img": "telegram.svg"
+    },
+    {
+      "link": "#",
+      "img": "twitter.svg"
+    }
+  ]
 }

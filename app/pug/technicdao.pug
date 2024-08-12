@@ -1,0 +1,45 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Detail page
+block main
+  .wrapper
+    .content
+      .detail-page.detail-page_accent
+        .container
+          .detail-page__hero
+            include includes/header
+            
+            .detail-page__bg
+
+            .detail-page__hero-wrap
+              .title-category 
+                span technic
+                |DAO
+              h1.title.title_h1 One of our key focuses is the development of blockchain applications and monitoring systems, both independently and in collaboration with other teams
+              
+              .detail-page__btn-controls
+                a(href="#projects" data-scroll).btn PROJECTS
+                a(href="#").btn.xs-dif CONNECT WALLET
+              
+        include includes/projects2
+
+        include includes/blog
+        +blog
+
+        
+         
+     
+
+
+
+  include includes/footer
+  include includes/scripts 
